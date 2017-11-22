@@ -4,7 +4,7 @@ public class SplitterLogImpl implements LogImpl {
 
     private final LogImpl[] logImplementations;
 
-    public SplitterLogImpl(LogImpl[] logImplementations) {
+    public SplitterLogImpl(LogImpl... logImplementations) {
         this.logImplementations = logImplementations;
     }
 

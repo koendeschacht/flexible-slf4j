@@ -43,7 +43,7 @@ public class FlexibleSlf4jLogger extends MarkerIgnoringBase {
     }
 
     protected boolean isLevelEnabled(int logLevel) {
-        return true;
+        return logLevel >= FlexibleSl4jLogFactory.LOG_LEVEL;
     }
 
     public boolean isTraceEnabled() {

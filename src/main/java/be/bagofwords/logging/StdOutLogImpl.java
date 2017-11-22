@@ -19,10 +19,10 @@ public class StdOutLogImpl implements LogImpl {
         PrintStream stream = level == LogLevel.INFO ? System.out : System.err;
         String time = TIME_FORMAT.format(new Date());
         if (throwable != null) {
-            stream.println(time + " " + level + " " + loggingClass + " " + message + " " + throwable.getMessage());
+            stream.println(time + " " + level + " " + loggingClass + "\t" + message + " " + throwable.getMessage());
             stream.println(Utils.getStackTrace(throwable));
         } else {
-            stream.println(time + " " + level + " " + loggingClass + " " + message);
+            stream.println(time + " " + level + " " + loggingClass + "\t" + message);
         }
     }
 }
