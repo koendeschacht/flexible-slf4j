@@ -60,4 +60,8 @@ public class FlexibleSl4jLogFactory implements ILoggerFactory {
     public void setLoggerImplementation(Thread thread, LogImpl log) {
         logImplementationsMap.put(thread.getThreadGroup(), log);
     }
+
+    public void setDefaultLogImplementation(LogImpl logImplementation) {
+        this.defaultLogImplementation = logImplementation;
+    }
 }
